@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -213,6 +214,31 @@
       margin-bottom: 1rem;
     }
 
+    /* Bacheca di Viaggio Google */
+    .bacheca-box {
+      background: var(--white);
+      border-radius: var(--border-radius);
+      padding: 2.5rem;
+      box-shadow: var(--shadow);
+      margin-bottom: 4rem;
+      text-align: center;
+      border: 3px dashed var(--primary);
+    }
+
+    .bacheca-box h2 {
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .bacheca-iframe {
+      width: 100%;
+      height: 450px;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      margin-top: 1.5rem;
+      background: #fafafa;
+    }
+
     /* Media Grid per Regolamento ed Etichette */
     .media-card {
       background: var(--white);
@@ -271,14 +297,6 @@
       background: #d95d13;
     }
 
-    /* Section Esercenti */
-    .esercenti-box {
-      background: linear-gradient(to right, #ffffff, #f0f8ff);
-      border-radius: var(--border-radius);
-      padding: 3rem 2rem;
-      box-shadow: var(--shadow);
-    }
-
     /* Footer */
     footer {
       background: var(--text-dark);
@@ -319,9 +337,9 @@
       </a>
       <ul class="nav-links">
         <li><a href="#progetto">Il Progetto</a></li>
+        <li><a href="#bacheca">Bacheca di Viaggio</a></li>
         <li><a href="#regolamento">Regolamento</a></li>
         <li><a href="#download">Download Kit</a></li>
-        <li><a href="#esercenti">Per i Negozi</a></li>
       </ul>
     </div>
   </header>
@@ -331,15 +349,15 @@
     <div class="hero-container">
       <div class="hero-text">
         <div class="badge-event">
-          🗓️ Evento: Flashmob 13 Novembre 2026 - Ore 10:30
+          🗓️ Evento: Flashmob Venerdì 13 Novembre 2026 - Ore 10:30
         </div>
         <h1>Un libro per tutti, <span>un viaggio sempre nuovo!</span></h1>
         <p>
           Il progetto <strong>LiberiLIBRI Bookcrossing</strong> nasce nel Plesso della Scuola Primaria di Nizza di Sicilia (I.C. "Stefano D'Arrigo" di Alì Terme) per trasformare la lettura in una grande avventura condivisa tra scuola, famiglie e territorio.
         </p>
         <div style="display:flex; gap: 1rem; flex-wrap: wrap;">
-          <a href="#regolamento" class="btn" style="width: auto;">Scopri il Regolamento</a>
-          <a href="#download" class="btn btn-secondary" style="width: auto;">Scarica gli Adesivi</a>
+          <a href="#bacheca" class="btn btn-secondary" style="width: auto;">🗺️ Segui il Viaggio dei Libri</a>
+          <a href="#regolamento" class="btn" style="width: auto; background: var(--text-dark);">Scopri il Regolamento</a>
         </div>
       </div>
       <div class="hero-image">
@@ -362,6 +380,20 @@ Leggere è un’avventura che non ha età, da oggi nella nostra scuola i libri t
       </p>
     </div>
 
+    <!-- Diario / Bacheca di Viaggio di Google -->
+    <section id="bacheca" class="bacheca-box">
+      <h2>🗺️ La Bacheca di Viaggio di LiberiLIBRI</h2>
+      <p>Hai trovato uno dei nostri libri a Nizza di Sicilia? O ne hai appena "liberato" uno nuovo? Aiutaci a seguire il suo viaggio nel tempo! Registra il libro inserendo dove si trova e un piccolo pensiero. Le risposte appariranno subito nel diario di bordo qui sotto!</p>
+      
+      <div style="margin-top: 1.5rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <!-- INCOLLA QUI IL LINK DEL TUO GOOGLE MODULI (FORMS) -->
+        <a href="INSERISCI_QUI_IL_LINK_AL_TUO_GOOGLE_MODULI" target="_blank" class="btn" style="width: auto; padding: 1rem 2rem; font-size: 1.1rem; background: #27ae60;">📝 Registra il Viaggio di un Libro</a>
+      </div>
+
+      <!-- Foglio Google delle Risposte Incorporato -->
+      <iframe class="bacheca-iframe" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTKhKU3bzEB9SsPiT4sD2wNIrsKIdNdCvakKjRV5u9xK9xDee3d7F5NKQS1CjLfUddLT1cDjvAPyXMn/pubhtml?widget=true&amp;headers=false"></iframe>
+    </section>
+
     <!-- Regolamento Infografica -->
     <section id="regolamento" style="margin-bottom: 4rem;">
       <h2 class="section-title">Come Funziona il Progetto?</h2>
@@ -382,7 +414,6 @@ Leggere è un’avventura che non ha età, da oggi nella nostra scuola i libri t
       <div class="grid-3">
         <!-- Card 1: Adesivo Libro -->
         <div class="media-card">
-          <!-- Anteprima del Logo per il bollino -->
           <img src="logo.png" alt="Adesivo Libro LiberiLIBRI" style="height: 200px; width: auto; object-fit: contain;">
           <h3>Adesivo per Liberare un Libro</h3>
           <p style="margin-bottom: 1.5rem; font-size: 0.95rem; flex-grow: 1;">
@@ -393,18 +424,16 @@ Leggere è un’avventura che non ha età, da oggi nella nostra scuola i libri t
 
         <!-- Card 2: QR Code Ufficiale -->
         <div class="media-card">
-          <!-- QR Code di Anteprima -->
-          <img src="qrcode.png" alt="QR Code LiberiLIBRI Bookcrossing" style="height: 200px; width: auto; object-fit: contain;">
+          <img src="qrcode.jpeg" alt="QR Code LiberiLIBRI Bookcrossing" style="height: 200px; width: auto; object-fit: contain;">
           <h3>QR Code del Progetto</h3>
           <p style="margin-bottom: 1.5rem; font-size: 0.95rem; flex-grow: 1;">
-            Scarica e stampa il QR Code ufficiale! Incollalo sui libri o posizionalo nei punti di scambio per permettere a tutti di accedere istantaneamente al sito.
+            Scarica e stampa il QR Code ufficiale! Incollalo sui libri o posizionalo nei punti di scambio per permettere a tutti di accedere istantaneamente al sito e alla bacheca.
           </p>
-          <a href="qrcode.png" download="QRCode_LiberiLIBRI.png" class="btn btn-secondary" style="background: #ffb800; color: #2c3e50;">📲 Scarica QR Code</a>
+          <a href="qrcode.jpeg" download="QRCode_LiberiLIBRI.jpeg" class="btn btn-secondary" style="background: #ffb800; color: #2c3e50;">📲 Scarica QR Code</a>
         </div>
 
         <!-- Card 3: Adesivo Vetrina Esercenti -->
         <div class="media-card" id="esercenti">
-          <!-- Adesivo Vetrina Esercenti Ufficiale -->
           <img src="etichetta.png" alt="Etichetta Vetrina Negozi Aderenti" style="height: 200px; width: auto; object-fit: contain;">
           <h3>Etichetta Vetrina per Esercenti</h3>
           <p style="margin-bottom: 1.5rem; font-size: 0.95rem; flex-grow: 1;">
